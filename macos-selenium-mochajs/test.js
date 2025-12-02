@@ -32,7 +32,7 @@ describe('Selenium ChromeDriver', function () {
     // By default, the test uses the latest stable Chrome version.
     // Replace the "stable" with the specific browser version if needed,
     // e.g. 'canary', '115' or '144.0.7534.0' for example.
-    options.setBrowserVersion('136');
+    options.setBrowserVersion('stable');
 
     const service = new chrome.ServiceBuilder()
       .loggingTo('chromedriver.log')
