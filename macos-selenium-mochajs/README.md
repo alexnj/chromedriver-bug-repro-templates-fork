@@ -22,15 +22,6 @@ The test script (`test.js`) performs the following actions:
     - The sample test navigates to `https://www.google.com`. You can modify this
       test to add your specific reproduction steps.
 
-### Targeting a Specific Chrome Version
-
-You can specify a particular version of Chrome/ChromeDriver using the
-`BROWSER_VERSION` variable in the script. This is useful for testing against 
-a specific build or regression testing.
- 
-If `BROWSER_VERSION` is not provided, the script automatically resolves and
-downloads the latest build from the Chrome Canary channel.
-
 ## For local testing
 
 - Have the appropriate version of Node.js installed.
@@ -42,13 +33,6 @@ downloads the latest build from the Chrome Canary channel.
   ```bash
   npm test
   ```
-
-### ChromeDriver Logs
-
-Verbose logging for ChromeDriver is enabled by default. Logs are captured and saved
-to individual files within the **`logs/`** directory, with each filename timestamped
-(e.g., `logs/chromedriver-2025-12-02T10:00:00.000Z.log`). This ensures that logs are
-preserved across multiple test runs and are crucial for debugging WebDriver issues.
 
 ## Customizing the Test
 
