@@ -20,12 +20,15 @@ const chrome = require('selenium-webdriver/chrome');
 
 describe('Selenium ChromeDriver', function () {
   let driver;
+  // The chrome and chromedriver installation can take some time. 
+  // Give 5 minutes to install everything.
+  this.timeout(5 * 60 * 1000);
 
   beforeEach(async function () {
     const options = new chrome.Options();
     options.addArguments('--headless');
     options.addArguments('--no-sandbox');
-    
+
     // By default, the test uses the latest Chrome version.
     // Replace the "stable" with the specific browser version if needed,
     // e.g. options.setBrowserVersion("115");
