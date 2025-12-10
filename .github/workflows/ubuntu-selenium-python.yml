@@ -1,6 +1,18 @@
 name: ubuntu-selenium-python
 
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - 'selenium-python/**'
+      - '.github/workflows/ubuntu-selenium-python.yml'
+  pull_request:
+    paths:
+      - 'selenium-python/**'
+      - '.github/workflows/ubuntu-selenium-python.yml'
+
+defaults:
+  run:
+    working-directory: selenium-python
 
 jobs:
   test:
